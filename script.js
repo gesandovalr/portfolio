@@ -10,7 +10,7 @@ const translations = {
     "nav.cta": "Book a Consultation",
     "hero.eyebrow": "INFRASTRUCTURE · CLOUD · AUTOMATION",
     "hero.title": "Your infrastructure should not depend on <span>manual work.</span>",
-    "hero.lead": "I help companies design, automate, modernize and secure infrastructure across on-premises and cloud environments reducing operational risk, improving reliability, and making environments repeatable by design.",
+    "hero.lead": "I help companies design, automate, modernize and secure infrastructure across on-premises and cloud environments — reducing operational risk, improving reliability, and making environments repeatable by design.",
     "hero.ctaPrimary": "Book an Infrastructure Assessment",
     "hero.ctaSecondary": "Explore Services",
     "hero.proofCloud": "Cloud & Hybrid",
@@ -50,7 +50,7 @@ const translations = {
     "services.backup.title": "Backup & Disaster Recovery",
     "services.backup.copy": "Recovery-focused backup architecture built around business continuity, RPO and RTO.",
     "services.observability.title": "Infrastructure Observability",
-    "services.observability.copy": "Monitoring designed to reduce risk not just another dashboard deployment.",
+    "services.observability.copy": "Monitoring designed to reduce risk — not just another dashboard deployment.",
     "services.msp.title": "MSP Platform Engineering",
     "services.msp.copy": "Automation and platform design for MSPs that need to scale without scaling headcount linearly.",
     "packages.eyebrow": "ENGAGEMENT MODELS",
@@ -87,7 +87,7 @@ const translations = {
     "process.document.title": "Document",
     "process.document.copy": "Leave a repeatable platform with diagrams, runbooks, code and clear operating procedures.",
     "stack.eyebrow": "TECHNOLOGY STACK",
-    "stack.title": "Tools selected to solve the problem not define it.",
+    "stack.title": "Tools selected to solve the problem — not define it.",
     "stack.cloud": "Cloud",
     "stack.virtualization": "Virtualization",
     "stack.iac": "Infrastructure as Code",
@@ -467,3 +467,24 @@ document.querySelectorAll(".lang-btn").forEach(button => {
 const storedLanguage = localStorage.getItem("portfolio-language");
 const browserLanguage = navigator.language?.toLowerCase().startsWith("es") ? "es" : "en";
 setLanguage(storedLanguage || browserLanguage);
+
+
+/* ---------- Back to top ---------- */
+const backToTop = document.getElementById("backToTop");
+
+if (backToTop) {
+  backToTop.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth"
+    });
+
+    // Remove any existing hash from the URL without reloading the page.
+    if (window.location.hash) {
+      history.replaceState(null, "", window.location.pathname + window.location.search);
+    }
+  });
+}
