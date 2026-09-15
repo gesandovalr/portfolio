@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Infrastructure, Cloud &amp; Automation consulting by German Sandoval. Azure, Terraform, OpenTofu, Ansible, DevOps, observability, backup and disaster recovery." name="description"/>
+<meta content="German Eduardo Sandoval" name="author"/>
+<title>German Sandoval | Infrastructure, Cloud &amp; Automation Consultant</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+<header class="site-header" id="top">
+<nav class="nav container">
+<a aria-label="German Sandoval home" class="brand" href="#top">
+<span class="brand-mark">&lt;GS/&gt;</span>
+<span class="brand-name" data-i18n="brand.name">German Sandoval</span>
+</a>
+<button aria-expanded="false" aria-label="Open navigation" class="nav-toggle" id="navToggle">
+<span></span><span></span><span></span>
+</button>
+<div class="nav-links" id="navLinks">
+<a data-i18n="nav.services" href="#services">Services</a>
+<a data-i18n="nav.solutions" href="#packages">Solutions</a>
+<a data-i18n="nav.process" href="#process">Process</a>
+<a data-i18n="nav.stack" href="#stack">Stack</a>
+<a data-i18n="nav.about" href="#about">About</a>
+<div aria-label="Language selector" class="language-switcher">
+<button aria-label="Switch to English" class="lang-btn active" data-lang="en" type="button">EN</button>
+<span>/</span>
+<button aria-label="Cambiar a español" class="lang-btn" data-lang="es" type="button">ES</button>
+</div>
+<a class="nav-cta" data-i18n="nav.cta" href="#contact">Book a Consultation</a>
+</div>
+</nav>
+</header>
+<main>
+<section class="hero">
+<div class="hero-grid-bg"></div>
+<div class="container hero-content">
+<div class="hero-copy">
+<div class="eyebrow" data-i18n="hero.eyebrow">INFRASTRUCTURE · CLOUD · AUTOMATION</div>
+<h1 data-i18n-html="hero.title">Your infrastructure should not depend on <span>manual work.</span></h1>
+<p class="hero-lead" data-i18n="hero.lead">
+            I help companies design, automate, modernize and secure infrastructure across
+            on-premises and cloud environments reducing operational risk, improving reliability,
+            and making environments repeatable by design.
+          </p>
+<div class="hero-actions">
+<a class="btn btn-primary" data-i18n="hero.ctaPrimary" href="#contact">Book an Infrastructure Assessment</a>
+<a class="btn btn-secondary" data-i18n="hero.ctaSecondary" href="#services">Explore Services</a>
+</div>
+<div class="hero-proof">
+<div>
+<strong data-i18n="hero.proofCloud">Cloud &amp; Hybrid</strong>
+<span data-i18n="hero.proofCloudSub">Azure · VMware · Proxmox</span>
+</div>
+<div>
+<strong data-i18n="hero.proofAutomation">Automation</strong>
+<span data-i18n="hero.proofAutomationSub">Terraform · OpenTofu · Ansible</span>
+</div>
+<div>
+<strong data-i18n="hero.proofReliability">Reliability</strong>
+<span data-i18n="hero.proofReliabilitySub">Monitoring · Backup · DR</span>
+</div>
+</div>
+</div>
+<div aria-label="Infrastructure automation workflow" class="hero-panel">
+<div class="panel-header">
+<span class="status-dot"></span>
+<span data-i18n="pipeline.file">infrastructure.pipeline</span>
+<span class="panel-state" data-i18n="pipeline.healthy">healthy</span>
+</div>
+<div class="pipeline">
+<div class="pipeline-step">
+<span class="step-number">01</span>
+<div>
+<small data-i18n="pipeline.source">SOURCE</small>
+<strong data-i18n="pipeline.git">Git</strong>
+</div>
+</div>
+<span class="arrow">→</span>
+<div class="pipeline-step">
+<span class="step-number">02</span>
+<div>
+<small data-i18n="pipeline.provision">PROVISION</small>
+<strong data-i18n="pipeline.terraform">Terraform / OpenTofu</strong>
+</div>
+</div>
+<span class="arrow">→</span>
+<div class="pipeline-step">
+<span class="step-number">03</span>
+<div>
+<small data-i18n="pipeline.configure">CONFIGURE</small>
+<strong data-i18n="pipeline.ansible">Ansible / AWX</strong>
+</div>
+</div>
+<span class="arrow">→</span>
+<div class="pipeline-step">
+<span class="step-number">04</span>
+<div>
+<small data-i18n="pipeline.observe">OBSERVE</small>
+<strong data-i18n="pipeline.zabbix">Zabbix / Grafana</strong>
+</div>
+</div>
+</div>
+<div class="terminal">
+<div><span class="prompt">$</span> terraform plan</div>
+<div class="muted" data-i18n="terminal.plan">Plan: 12 to add, 3 to change, 0 to destroy.</div>
+<div><span class="prompt">$</span> ansible-playbook hardening.yml</div>
+<div class="success" data-i18n="terminal.changed">changed=8   failed=0   unreachable=0</div>
+<div><span class="prompt">$</span> status</div>
+<div class="success" data-i18n="terminal.status">Infrastructure reproducible. Monitoring active. Backup verified.</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section section-intro">
+<div class="container split-intro">
+<div>
+<div class="eyebrow" data-i18n="outcome.eyebrow">THE OUTCOME</div>
+<h2 data-i18n="outcome.title">From fragile operations to reliable infrastructure.</h2>
+</div>
+<p data-i18n="outcome.copy">
+          The goal is not to sell you another tool. It is to remove unnecessary manual work,
+          standardize infrastructure, improve visibility, and give your team a platform they can
+          operate with confidence.
+        </p>
+</div>
+<div class="container before-after">
+<div class="state-card state-before">
+<span class="state-label" data-i18n="outcome.before">BEFORE</span>
+<ul>
+<li data-i18n="outcome.before1">Manual provisioning</li>
+<li data-i18n="outcome.before2">Configuration drift</li>
+<li data-i18n="outcome.before3">Human errors</li>
+<li data-i18n="outcome.before4">Slow deployments</li>
+<li data-i18n="outcome.before5">Operational risk</li>
+</ul>
+</div>
+<div class="transformation-arrow">→</div>
+<div class="state-card state-after">
+<span class="state-label" data-i18n="outcome.after">AFTER</span>
+<ul>
+<li data-i18n="outcome.after1">Git-based infrastructure</li>
+<li data-i18n="outcome.after2">Infrastructure as Code</li>
+<li data-i18n="outcome.after3">Automated configuration</li>
+<li data-i18n="outcome.after4">Monitoring &amp; alerting</li>
+<li data-i18n="outcome.after5">Documented recovery</li>
+</ul>
+</div>
+</div>
+</section>
+<section class="section dark-section" id="services">
+<div class="container">
+<div class="section-heading">
+<div class="eyebrow" data-i18n="services.eyebrow">SERVICES</div>
+<h2 data-i18n="services.title">Infrastructure modernization from architecture to operations.</h2>
+<p data-i18n="services.copy">
+            Modular services that can be delivered independently or combined into a complete
+            modernization roadmap.
+          </p>
+</div>
+<div class="services-grid">
+<article class="service-card">
+<div class="icon-box">☁</div>
+<h3 data-i18n="services.cloud.title">Cloud &amp; Infrastructure</h3>
+<p data-i18n="services.cloud.copy">Architecture and modernization for Azure, hybrid and on-premises environments.</p>
+<ul>
+<li data-i18n="svc.azureMigration">Azure architecture &amp; migration</li>
+<li data-i18n="svc.virtualization">VMware, Proxmox &amp; Hyper-V</li>
+<li data-i18n="svc.platforms">Windows &amp; Linux platforms</li>
+<li data-i18n="svc.ha">High availability &amp; capacity planning</li>
+</ul>
+</article>
+<article class="service-card">
+<div class="icon-box">⚙</div>
+<h3 data-i18n="services.iac.title">Infrastructure as Code</h3>
+<p data-i18n="services.iac.copy">Repeatable infrastructure provisioned through code, version control and pipelines.</p>
+<ul>
+<li data-i18n="svc.tf">Terraform &amp; OpenTofu</li>
+<li data-i18n="svc.modules">Reusable modules</li>
+<li data-i18n="svc.state">Remote state design</li>
+<li data-i18n="outcome.after1">Git-based infrastructure</li>
+</ul>
+</article>
+<article class="service-card">
+<div class="icon-box">↻</div>
+<h3 data-i18n="services.automation.title">Automation &amp; Configuration</h3>
+<p data-i18n="services.automation.copy">Automate configuration, deployment and recurring infrastructure operations.</p>
+<ul>
+<li data-i18n="svc.ansible">Ansible &amp; AWX</li>
+<li data-i18n="svc.shell">PowerShell &amp; Bash</li>
+<li data-i18n="svc.gitlab">GitLab CI/CD</li>
+<li data-i18n="svc.azdo">Azure DevOps</li>
+</ul>
+</article>
+<article class="service-card">
+<div class="icon-box">⌁</div>
+<h3 data-i18n="services.devops.title">DevOps &amp; SRE</h3>
+<p data-i18n="services.devops.copy">Operational practices that increase deployment consistency, reliability and visibility.</p>
+<ul>
+<li data-i18n="svc.cicdarch">CI/CD architecture</li>
+<li data-i18n="svc.deploy">Deployment automation</li>
+<li data-i18n="svc.reliability">Reliability &amp; capacity planning</li>
+<li data-i18n="svc.incidentObs">Incident-oriented observability</li>
+</ul>
+</article>
+<article class="service-card">
+<div class="icon-box">⌾</div>
+<h3 data-i18n="services.security.title">Security &amp; Compliance</h3>
+<p data-i18n="services.security.copy">Secure-by-design infrastructure with least privilege and hardened administrative access.</p>
+<ul>
+<li data-i18n="svc.hardening">Linux &amp; Windows hardening</li>
+<li data-i18n="svc.secrets">Vault &amp; secrets management</li>
+<li data-i18n="svc.segmentation">Segmentation &amp; bastion access</li>
+<li data-i18n="svc.zerotrust">Zero Trust principles</li>
+</ul>
+</article>
+<article class="service-card">
+<div class="icon-box">⟳</div>
+<h3 data-i18n="services.backup.title">Backup &amp; Disaster Recovery</h3>
+<p data-i18n="services.backup.copy">Recovery-focused backup architecture built around business continuity, RPO and RTO.</p>
+<ul>
+<li data-i18n="svc.veeam">Veeam architecture</li>
+<li data-i18n="svc.repositories">Hardened repositories</li>
+<li data-i18n="svc.replication">Replication &amp; recovery plans</li>
+<li data-i18n="svc.restore">Restore testing &amp; documentation</li>
+</ul>
+</article>
+<article class="service-card">
+<div class="icon-box">◫</div>
+<h3 data-i18n="services.observability.title">Infrastructure Observability</h3>
+<p data-i18n="services.observability.copy">Monitoring designed to reduce risk not just another dashboard deployment.</p>
+<ul>
+<li data-i18n="svc.zabbix">Zabbix &amp; Grafana</li>
+<li data-i18n="svc.capacity">Capacity &amp; availability</li>
+<li data-i18n="svc.dashboards">Technical and executive dashboards</li>
+<li data-i18n="svc.sla">SLA monitoring &amp; alerting</li>
+</ul>
+</article>
+<article class="service-card">
+<div class="icon-box">▦</div>
+<h3 data-i18n="services.msp.title">MSP Platform Engineering</h3>
+<p data-i18n="services.msp.copy">Automation and platform design for MSPs that need to scale without scaling headcount linearly.</p>
+<ul>
+<li data-i18n="svc.multitenant">Multi-tenant infrastructure</li>
+<li data-i18n="svc.onboarding">Customer onboarding automation</li>
+<li data-i18n="svc.monitorBackup">Monitoring &amp; backup platform design</li>
+<li data-i18n="svc.sops">SOPs &amp; repeatable operations</li>
+</ul>
+</article>
+</div>
+</div>
+</section>
+<section class="section" id="packages">
+<div class="container">
+<div class="section-heading">
+<div class="eyebrow" data-i18n="packages.eyebrow">ENGAGEMENT MODELS</div>
+<h2 data-i18n="packages.title">Start with an assessment. Scale into implementation.</h2>
+<p data-i18n="packages.copy">
+            A simple engagement path that lets organizations start small, validate priorities,
+            and invest based on a clear technical roadmap.
+          </p>
+</div>
+<div class="packages-grid">
+<article class="package-card featured">
+<div class="package-tag" data-i18n="packages.best">BEST STARTING POINT</div>
+<h3 data-i18n="packages.assessment.title">Infrastructure Assessment</h3>
+<p class="package-duration" data-i18n="packages.duration1">1–2 weeks</p>
+<p data-i18n="packages.assessment.copy">Understand the current state, risks, technical debt and modernization opportunities.</p>
+<ul>
+<li data-i18n="pkg.archReview">Architecture review</li>
+<li data-i18n="pkg.secReview">Security review</li>
+<li data-i18n="pkg.autoAssessment">Automation assessment</li>
+<li data-i18n="pkg.backupReview">Backup &amp; recovery review</li>
+<li data-i18n="pkg.monitorReview">Monitoring review</li>
+<li data-i18n="pkg.report">Executive report &amp; roadmap</li>
+</ul>
+<a class="text-link" data-i18n="packages.assessment.link" href="#contact">Start an assessment →</a>
+</article>
+<article class="package-card">
+<h3 data-i18n="packages.automation.title">Automation</h3>
+<p class="package-duration" data-i18n="packages.duration2">2–6 weeks</p>
+<p data-i18n="packages.automation.copy">Transform manual infrastructure into reproducible, version-controlled automation.</p>
+<ul>
+<li data-i18n="pkg.tf">Terraform / OpenTofu</li>
+<li data-i18n="pkg.ansible">Ansible / AWX</li>
+<li data-i18n="pkg.devops">GitLab / Azure DevOps</li>
+<li data-i18n="pkg.cicd">CI/CD pipelines</li>
+<li data-i18n="pkg.docs">Documentation</li>
+</ul>
+<a class="text-link" data-i18n="packages.automation.link" href="#contact">Discuss automation →</a>
+</article>
+<article class="package-card">
+<h3 data-i18n="packages.cloud.title">Cloud Modernization</h3>
+<p class="package-duration" data-i18n="packages.duration3">4–12 weeks</p>
+<p data-i18n="packages.cloud.copy">Modernize architecture, security, automation and operations as one coordinated project.</p>
+<ul>
+<li data-i18n="pkg.cloudArch">Cloud architecture</li>
+<li data-i18n="pkg.migration">Migration strategy</li>
+<li data-i18n="pkg.hybrid">Hybrid connectivity</li>
+<li data-i18n="pkg.baseline">Security baseline</li>
+<li data-i18n="pkg.monBackup">Monitoring &amp; backup</li>
+</ul>
+<a class="text-link" data-i18n="packages.cloud.link" href="#contact">Plan modernization →</a>
+</article>
+<article class="package-card">
+<h3 data-i18n="packages.managed.title">Managed Infrastructure Consulting</h3>
+<p class="package-duration" data-i18n="packages.monthly">Monthly</p>
+<p data-i18n="packages.managed.copy">Ongoing senior infrastructure guidance without building a full internal platform team.</p>
+<ul>
+<li data-i18n="pkg.archConsult">Architecture consulting</li>
+<li data-i18n="pkg.cloudSupport">Cloud &amp; infrastructure support</li>
+<li data-i18n="pkg.automation">Automation</li>
+<li data-i18n="pkg.capacity">Capacity planning</li>
+<li data-i18n="pkg.improvement">Continuous improvement</li>
+</ul>
+<a class="text-link" data-i18n="packages.managed.link" href="#contact">Explore a retainer →</a>
+</article>
+</div>
+</div>
+</section>
+<section class="section process-section" id="process">
+<div class="container">
+<div class="section-heading">
+<div class="eyebrow" data-i18n="process.eyebrow">HOW I WORK</div>
+<h2 data-i18n="process.title">A technical process designed around business risk.</h2>
+</div>
+<div class="process-grid">
+<div class="process-item">
+<span>01</span>
+<h3 data-i18n="process.discover.title">Discover</h3>
+<p data-i18n="process.discover.copy">Understand architecture, constraints, business priorities, operational pain and risk.</p>
+</div>
+<div class="process-item">
+<span>02</span>
+<h3 data-i18n="process.assess.title">Assess</h3>
+<p data-i18n="process.assess.copy">Map the current state, identify gaps, dependencies, security issues and automation opportunities.</p>
+</div>
+<div class="process-item">
+<span>03</span>
+<h3 data-i18n="process.design.title">Design</h3>
+<p data-i18n="process.design.copy">Define target architecture, standards, recovery objectives and an implementation roadmap.</p>
+</div>
+<div class="process-item">
+<span>04</span>
+<h3 data-i18n="process.automate.title">Automate</h3>
+<p data-i18n="process.automate.copy">Codify infrastructure, configuration and deployment workflows wherever it reduces operational risk.</p>
+</div>
+<div class="process-item">
+<span>05</span>
+<h3 data-i18n="process.validate.title">Validate</h3>
+<p data-i18n="process.validate.copy">Test deployment, observability, recovery, security controls and operational procedures.</p>
+</div>
+<div class="process-item">
+<span>06</span>
+<h3 data-i18n="process.document.title">Document</h3>
+<p data-i18n="process.document.copy">Leave a repeatable platform with diagrams, runbooks, code and clear operating procedures.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section dark-section" id="stack">
+<div class="container">
+<div class="section-heading">
+<div class="eyebrow" data-i18n="stack.eyebrow">TECHNOLOGY STACK</div>
+<h2 data-i18n="stack.title">Tools selected to solve the problem not define it.</h2>
+</div>
+<div class="stack-grid">
+<div class="stack-group">
+<span data-i18n="stack.cloud">Cloud</span>
+<div class="chips">
+<b data-i18n="stack.azure">Microsoft Azure</b>
+<b data-i18n="stack.hybrid">Hybrid Cloud</b>
+</div>
+</div>
+<div class="stack-group">
+<span data-i18n="stack.virtualization">Virtualization</span>
+<div class="chips">
+<b>VMware</b>
+<b>Proxmox</b>
+<b>Hyper-V</b>
+</div>
+</div>
+<div class="stack-group">
+<span data-i18n="services.iac.title">Infrastructure as Code</span>
+<div class="chips">
+<b>Terraform</b>
+<b>OpenTofu</b>
+</div>
+</div>
+<div class="stack-group">
+<span data-i18n="stack.configuration">Configuration</span>
+<div class="chips">
+<b>Ansible</b>
+<b>AWX</b>
+<b>PowerShell</b>
+<b>Bash</b>
+</div>
+</div>
+<div class="stack-group">
+<span data-i18n="stack.devops">DevOps</span>
+<div class="chips">
+<b>GitLab CI/CD</b>
+<b>Azure DevOps</b>
+<b>Git</b>
+</div>
+</div>
+<div class="stack-group">
+<span data-i18n="stack.observability">Observability</span>
+<div class="chips">
+<b>Zabbix</b>
+<b>Grafana</b>
+</div>
+</div>
+<div class="stack-group">
+<span data-i18n="stack.backup">Backup &amp; DR</span>
+<div class="chips">
+<b>Veeam</b>
+<b>Veeam Cloud Connect</b>
+</div>
+</div>
+<div class="stack-group">
+<span data-i18n="stack.security">Security</span>
+<div class="chips">
+<b>HashiCorp Vault</b>
+<b>Zero Trust</b>
+<b>Hardening</b>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section audiences">
+<div class="container">
+<div class="section-heading">
+<div class="eyebrow" data-i18n="audience.eyebrow">WHO I HELP</div>
+<h2 data-i18n="audience.title">Best fit for teams operating critical or growing infrastructure.</h2>
+</div>
+<div class="audience-grid">
+<article>
+<span>01</span>
+<h3 data-i18n="audience.fintech.title">Fintech &amp; Financial Services</h3>
+<p data-i18n="audience.fintech.copy">Security-sensitive infrastructure, compliance, continuity and controlled change.</p>
+</article>
+<article>
+<span>02</span>
+<h3 data-i18n="audience.saas.title">SaaS Companies</h3>
+<p data-i18n="audience.saas.copy">Cloud architecture, repeatable environments and automation for faster delivery.</p>
+</article>
+<article>
+<span>03</span>
+<h3 data-i18n="audience.msp.title">MSPs &amp; IT Providers</h3>
+<p data-i18n="audience.msp.copy">Platform automation, multi-tenancy, monitoring and customer onboarding at scale.</p>
+</article>
+<article>
+<span>04</span>
+<h3 data-i18n="audience.midmarket.title">Mid-Market Companies</h3>
+<p data-i18n="audience.midmarket.copy">Organizations with complex infrastructure but no large internal DevOps or SRE team.</p>
+</article>
+</div>
+</div>
+</section>
+<section class="section about-section" id="about">
+<div class="container about-grid">
+<div>
+<div class="eyebrow" data-i18n="about.eyebrow">ABOUT</div>
+<h2 data-i18n="about.title">Infrastructure, Cloud &amp; Automation Consultant</h2>
+</div>
+<div class="about-copy">
+<p class="large-copy" data-i18n="about.copy1">
+            I work across infrastructure, cloud, automation and reliability to help organizations
+            turn complex environments into platforms that are easier to deploy, secure, monitor and recover.
+          </p>
+<p data-i18n="about.copy2">
+            My approach connects architecture with day-to-day operations: provisioning through
+            Infrastructure as Code, configuration through automation, controlled deployment pipelines,
+            observability, backup and documented recovery procedures.
+          </p>
+<p data-i18n="about.copy3">
+            The result is infrastructure that does not depend on tribal knowledge or repetitive manual work.
+          </p>
+<div class="about-links">
+<a data-i18n="link.linkedin" href="https://www.linkedin.com/" rel="noreferrer" target="_blank">LinkedIn ↗</a>
+<a data-i18n="link.github" href="https://github.com/" rel="noreferrer" target="_blank">GitHub ↗</a>
+</div>
+</div>
+</div>
+</section>
+<section class="section contact-section" id="contact">
+<div class="container contact-card">
+<div>
+<div class="eyebrow" data-i18n="contact.eyebrow">START A CONVERSATION</div>
+<h2 data-i18n="contact.title">What would break first if your infrastructure had to scale tomorrow?</h2>
+<p data-i18n="contact.copy">
+            Start with an Infrastructure Assessment to understand your current state, technical risks,
+            automation opportunities and practical next steps.
+          </p>
+</div>
+<div class="contact-actions">
+<a class="btn btn-primary" data-i18n="contact.email" href="mailto:your-email@example.com?subject=Infrastructure%20Assessment" id="emailCta">
+            Email Me
+          </a>
+<a class="btn btn-secondary" data-i18n="contact.linkedin" href="https://www.linkedin.com/" rel="noreferrer" target="_blank">
+            Connect on LinkedIn
+          </a>
+<small data-i18n="contact.note">Replace the email and LinkedIn URL before publishing.</small>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="container footer-inner">
+<div>
+<strong>German Sandoval</strong>
+<span data-i18n="footer.tagline">Infrastructure · Cloud · Automation</span>
+</div>
+<div class="footer-right">
+<span>© <span id="year"></span> German Sandoval</span>
+<a data-i18n="footer.top" href="#top">Back to top ↑</a>
+</div>
+</div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
