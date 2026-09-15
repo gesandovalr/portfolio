@@ -63,3 +63,10 @@ The site includes an **EN / ES** language selector in the navigation.
 - On the first visit, Spanish is selected automatically when the browser language starts with `es`; otherwise English is used.
 - The HTML `<html lang="">`, page title and meta description are updated dynamically.
 - No external translation API is required.
+
+
+## Back-to-top fix
+
+The footer control is now a real button instead of an anchor link.
+
+It uses JavaScript to scroll to the absolute top of the page and does not add `#top` to the URL.

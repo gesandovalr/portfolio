@@ -468,13 +468,14 @@ const storedLanguage = localStorage.getItem("portfolio-language");
 const browserLanguage = navigator.language?.toLowerCase().startsWith("es") ? "es" : "en";
 setLanguage(storedLanguage || browserLanguage);
 
-
 /* ---------- Back to top ---------- */
-const backToTop = document.getElementById("backToTop");
+const backToTopButton = document.getElementById("backToTop");
 
-if (backToTop) {
-  backToTop.addEventListener("click", (event) => {
-    event.preventDefault();
+if (backToTopButton) {
+  backToTopButton.addEventListener("click", () => {
+    // Force all common scroll containers to the absolute top.
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
 
     window.scrollTo({
       top: 0,
@@ -482,9 +483,13 @@ if (backToTop) {
       behavior: "smooth"
     });
 
-    // Remove any existing hash from the URL without reloading the page.
+    // Keep the URL clean and remove any old #top hash.
     if (window.location.hash) {
-      history.replaceState(null, "", window.location.pathname + window.location.search);
+      history.replaceState(
+        null,
+        "",
+        window.location.pathname + window.location.search
+      );
     }
   });
 }
