@@ -867,20 +867,9 @@ footer {
 }
 
 
-/* ---------- Back to top button ---------- */
-.back-to-top {
-  appearance: none;
-  border: 0;
-  background: transparent;
-  color: var(--accent);
-  font: inherit;
-  cursor: pointer;
-  padding: 0;
-  margin-top: 4px;
-}
 
-.back-to-top:hover,
-.back-to-top:focus-visible {
-  text-decoration: underline;
-  outline: none;
+
+/* Keep anchor navigation aligned correctly with the sticky header. */
+#top {
+  scroll-margin-top: 76px;
 }

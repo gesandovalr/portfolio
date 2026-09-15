@@ -70,3 +70,13 @@ The site includes an **EN / ES** language selector in the navigation.
 The footer control is now a real button instead of an anchor link.
 
 It uses JavaScript to scroll to the absolute top of the page and does not add `#top` to the URL.
+
+
+## Back-to-top link
+
+The footer uses the original link-style **Back to top / Volver arriba** control.
+
+- It points to `#top`.
+- The header is explicitly marked with `id="top"`.
+- JavaScript adds smooth scrolling while keeping the URL clean.
+- If JavaScript is unavailable, the native `href="#top"` fallback still works.

@@ -468,23 +468,22 @@ const storedLanguage = localStorage.getItem("portfolio-language");
 const browserLanguage = navigator.language?.toLowerCase().startsWith("es") ? "es" : "en";
 setLanguage(storedLanguage || browserLanguage);
 
-/* ---------- Back to top ---------- */
-const backToTopButton = document.getElementById("backToTop");
+/* ---------- Back to top anchor ---------- */
+const backToTop = document.getElementById("backToTop");
 
-if (backToTopButton) {
-  backToTopButton.addEventListener("click", () => {
-    // Force all common scroll containers to the absolute top.
-    document.documentElement.scrollTop = 0;
-    document.body.scrollTop = 0;
+if (backToTop) {
+  backToTop.addEventListener("click", (event) => {
+    const topTarget = document.getElementById("top");
 
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth"
-    });
+    if (topTarget) {
+      event.preventDefault();
 
-    // Keep the URL clean and remove any old #top hash.
-    if (window.location.hash) {
+      topTarget.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+
+      // Keep the URL clean instead of leaving #top visible.
       history.replaceState(
         null,
         "",
