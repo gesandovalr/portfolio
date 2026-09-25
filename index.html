@@ -27,7 +27,7 @@
 <a data-i18n="nav.solutions" href="#packages">Solutions</a>
 <a data-i18n="nav.process" href="#process">Process</a>
 <a data-i18n="nav.stack" href="#stack">Stack</a>
-<a data-i18n="nav.about" href="#about">About</a>
+<a data-i18n="nav.portfolio" href="#portfolio">Portfolio</a>
 <div aria-label="Language selector" class="language-switcher">
 <button aria-label="Switch to English" class="lang-btn active" data-lang="en" type="button">EN</button>
 <span>/</span>
@@ -465,29 +465,106 @@
 </div>
 </div>
 </section>
-<section class="section about-section" id="about">
-<div class="container about-grid">
+<section class="section portfolio-section" id="portfolio">
+<div class="container">
+<div class="section-heading portfolio-heading">
+<div class="eyebrow" data-i18n="portfolio.eyebrow">PORTFOLIO</div>
+<h2 data-i18n="portfolio.title">Hands-on infrastructure projects, built and automated end to end.</h2>
+<p data-i18n="portfolio.copy">A growing collection of labs and reference implementations across Linux virtualization, Microsoft Hyper-V and Azure.</p>
+</div>
+
+<div class="portfolio-tracks" aria-label="Portfolio technology tracks">
+<article class="portfolio-track portfolio-track-active">
+<div class="portfolio-track-icon">⌘</div>
 <div>
-<div class="eyebrow" data-i18n="about.eyebrow">ABOUT</div>
-<h2 data-i18n="about.title">Infrastructure, Cloud &amp; Automation Consultant</h2>
+<span class="portfolio-track-kicker" data-i18n="portfolio.libvirt.kicker">LINUX VIRTUALIZATION</span>
+<h3 data-i18n="portfolio.libvirt.title">Libvirt / QEMU / KVM</h3>
+<p data-i18n="portfolio.libvirt.copy">Reproducible virtual infrastructure built with OpenTofu, cloud-init and Ansible.</p>
 </div>
-<div class="about-copy">
-<p class="large-copy" data-i18n="about.copy1">
-            I work across infrastructure, cloud, automation and reliability to help organizations
-            turn complex environments into platforms that are easier to deploy, secure, monitor and recover.
-          </p>
-<p data-i18n="about.copy2">
-            My approach connects architecture with day-to-day operations: provisioning through
-            Infrastructure as Code, configuration through automation, controlled deployment pipelines,
-            observability, backup and documented recovery procedures.
-          </p>
-<p data-i18n="about.copy3">
-            The result is infrastructure that does not depend on tribal knowledge or repetitive manual work.
-          </p>
-<div class="about-links">
+<span class="portfolio-track-count">01</span>
+</article>
+
+<article class="portfolio-track portfolio-track-coming">
+<div class="portfolio-track-icon">⊞</div>
+<div>
+<span class="portfolio-track-kicker" data-i18n="portfolio.hyperv.kicker">MICROSOFT VIRTUALIZATION</span>
+<h3 data-i18n="portfolio.hyperv.title">Hyper-V</h3>
+<p data-i18n="portfolio.hyperv.copy">Windows virtualization, automation and infrastructure demos will be added here.</p>
+</div>
+<span class="portfolio-track-status" data-i18n="portfolio.comingSoon">COMING SOON</span>
+</article>
+
+<article class="portfolio-track portfolio-track-coming">
+<div class="portfolio-track-icon">☁</div>
+<div>
+<span class="portfolio-track-kicker" data-i18n="portfolio.azure.kicker">CLOUD PLATFORM</span>
+<h3 data-i18n="portfolio.azure.title">Microsoft Azure</h3>
+<p data-i18n="portfolio.azure.copy">Azure architecture, IaC and automation demos will be added here.</p>
+</div>
+<span class="portfolio-track-status" data-i18n="portfolio.comingSoon">COMING SOON</span>
+</article>
+</div>
+
+<article class="project-showcase">
+<div class="project-showcase-main">
+<div class="project-meta">
+<span class="project-number">PROJECT 01</span>
+<span class="project-status"><i></i><span data-i18n="portfolio.project.status">PUBLISHED</span></span>
+</div>
+<h3 data-i18n="portfolio.project.title">Automated Percona XtraDB Cluster on QEMU/KVM</h3>
+<p class="project-lead" data-i18n="portfolio.project.copy">A three-node Percona XtraDB Cluster lab provisioned on libvirt/QEMU with OpenTofu and configured with Ansible. The project demonstrates repeatable VM provisioning, static networking, cloud-init, encrypted Galera traffic and automated database bootstrap.</p>
+<div class="project-tech" aria-label="Project technologies">
+<span>OpenTofu</span>
+<span>Libvirt</span>
+<span>QEMU/KVM</span>
+<span>AlmaLinux</span>
+<span>Ansible</span>
+<span>Percona XtraDB Cluster</span>
+<span>Galera</span>
+</div>
+<div class="project-actions">
+<a class="btn btn-primary" href="https://github.com/gesandovalr/portfolio-qemu-pxc-cluster" rel="noreferrer" target="_blank" data-i18n="portfolio.project.repo">View GitHub Repository ↗</a>
+</div>
+</div>
+<div class="project-architecture" aria-label="Project architecture">
+<div class="architecture-header">
+<span class="status-dot"></span>
+<span>pxc-lab.architecture</span>
+<span class="panel-state">automated</span>
+</div>
+<div class="architecture-flow">
+<div class="architecture-node architecture-source">
+<small>SOURCE</small>
+<strong>OpenTofu</strong>
+<span>IaC</span>
+</div>
+<div class="architecture-connector">→</div>
+<div class="architecture-node">
+<small>VIRTUALIZE</small>
+<strong>libvirt / QEMU</strong>
+<span>3 × AlmaLinux</span>
+</div>
+<div class="architecture-connector">→</div>
+<div class="architecture-node">
+<small>CONFIGURE</small>
+<strong>Ansible</strong>
+<span>Roles + Vault</span>
+</div>
+</div>
+<div class="cluster-mini">
+<div><span>01</span><strong>PXC Node 01</strong><small>Bootstrap</small></div>
+<div><span>02</span><strong>PXC Node 02</strong><small>Galera member</small></div>
+<div><span>03</span><strong>PXC Node 03</strong><small>Galera member</small></div>
+</div>
+<div class="architecture-footer">
+<span data-i18n="portfolio.project.archFooter">Encrypted cluster traffic · repeatable deployment · Git-based infrastructure</span>
+</div>
+</div>
+</article>
+
+<div class="portfolio-footer-links">
 <a data-i18n="link.linkedin" href="https://www.linkedin.com/in/german-eduardo-sandoval-94a88a12/" rel="noreferrer" target="_blank">LinkedIn ↗</a>
-<a data-i18n="link.github" href="https://github.com/gesandovalr" rel="noreferrer" target="_blank">GitHub ↗</a>
-</div>
+<a data-i18n="portfolio.allGithub" href="https://github.com/gesandovalr" rel="noreferrer" target="_blank">All GitHub projects ↗</a>
 </div>
 </div>
 </section>
