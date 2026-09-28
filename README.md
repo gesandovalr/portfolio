@@ -11,11 +11,8 @@ Bilingual English/Spanish static portfolio website prepared for GitHub Pages.
 
 ## Before publishing
 
-Edit `index.html` and replace:
+Contact, LinkedIn and GitHub links are already configured for German Sandoval.
 
-- `your-email@example.com`
-- `https://www.linkedin.com/`
-- `https://github.com/`
 
 with your real contact and profile URLs.
 
@@ -80,3 +77,11 @@ The footer uses the original link-style **Back to top / Volver arriba** control.
 - The header is explicitly marked with `id="top"`.
 - JavaScript adds smooth scrolling while keeping the URL clean.
 - If JavaScript is unavailable, the native `href="#top"` fallback still works.
+
+## SEO files
+
+- `robots.txt` - crawler directives and sitemap discovery
+- `sitemap.xml` - canonical site URL for search engines
+- `favicon.svg` - site favicon
+- `social-card.png` - Open Graph / social sharing image
+- `index.html` - canonical, robots meta, Open Graph, Twitter Card and JSON-LD Person schema

@@ -93,6 +93,25 @@ p {
 }
 
 /* ---------- Header ---------- */
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 9999;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #0b1020;
+  font-weight: 700;
+  transform: translateY(-160%);
+  transition: transform 0.2s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
 .site-header {
   position: sticky;
   top: 0;

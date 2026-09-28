@@ -1,7 +1,7 @@
 const translations = {
   "en": {
-    "title": "German Sandoval | Infrastructure, Cloud & Automation Consultant",
-    "description": "Infrastructure, Cloud & Automation consulting by German Sandoval. Azure, Terraform, OpenTofu, Ansible, DevOps, observability, backup and disaster recovery.",
+    "title": "German Sandoval | Cloud, DevOps & Infrastructure Consultant",
+    "description": "Cloud, DevOps and infrastructure consulting by German Sandoval: Azure, OpenTofu, Terraform, Ansible, automation, observability, backup and disaster recovery.",
     "nav.services": "Services",
     "nav.solutions": "Solutions",
     "nav.process": "Process",
@@ -9,7 +9,7 @@ const translations = {
     "nav.portfolio": "Portfolio",
     "nav.cta": "Book a Consultation",
     "hero.eyebrow": "INFRASTRUCTURE · CLOUD · AUTOMATION",
-    "hero.title": "Your infrastructure should not depend on <span>manual work.</span>",
+    "hero.title": "Cloud, DevOps & infrastructure automation that reduces <span>manual work.</span>",
     "hero.lead": "I help companies design, automate, modernize and secure infrastructure across on-premises and cloud environments reducing operational risk, improving reliability, and making environments repeatable by design.",
     "hero.ctaPrimary": "Book an Infrastructure Assessment",
     "hero.ctaSecondary": "Explore Services",
@@ -135,7 +135,6 @@ const translations = {
     "contact.copy": "Start with an Infrastructure Assessment to understand your current state, technical risks, automation opportunities and practical next steps.",
     "contact.email": "Email Me",
     "contact.linkedin": "Connect on LinkedIn",
-    "contact.note": "Replace the email and LinkedIn URL before publishing.",
     "footer.top": "Back to top ↑",
     "svc.azureMigration": "Azure architecture & migration",
     "svc.virtualization": "VMware, Proxmox & Hyper-V",
@@ -214,8 +213,8 @@ const translations = {
     "pkg.automation": "Automation"
   },
   "es": {
-    "title": "German Sandoval | Consultor de Infraestructura, Cloud y Automatización",
-    "description": "Consultoría de Infraestructura, Cloud y Automatización por German Sandoval. Azure, Terraform, OpenTofu, Ansible, DevOps, observabilidad, backup y recuperación ante desastres.",
+    "title": "German Sandoval | Consultor Cloud, DevOps e Infraestructura",
+    "description": "Consultoría Cloud, DevOps e infraestructura por German Sandoval: Azure, OpenTofu, Terraform, Ansible, automatización, observabilidad, backup y recuperación ante desastres.",
     "nav.services": "Servicios",
     "nav.solutions": "Soluciones",
     "nav.process": "Proceso",
@@ -223,7 +222,7 @@ const translations = {
     "nav.portfolio": "Portafolio",
     "nav.cta": "Agendar una consulta",
     "hero.eyebrow": "INFRAESTRUCTURA · CLOUD · AUTOMATIZACIÓN",
-    "hero.title": "Tu infraestructura no debería depender del <span>trabajo manual.</span>",
+    "hero.title": "Automatización Cloud, DevOps e infraestructura que reduce el <span>trabajo manual.</span>",
     "hero.lead": "Ayudo a empresas a diseñar, automatizar, modernizar y asegurar su infraestructura en entornos on-premises y cloud, reduciendo el riesgo operativo, mejorando la confiabilidad y creando ambientes repetibles por diseño.",
     "hero.ctaPrimary": "Solicitar un Assessment de Infraestructura",
     "hero.ctaSecondary": "Explorar servicios",
@@ -349,7 +348,6 @@ const translations = {
     "contact.copy": "Comienza con un Assessment de Infraestructura para entender tu estado actual, riesgos técnicos, oportunidades de automatización y próximos pasos prácticos.",
     "contact.email": "Escríbeme",
     "contact.linkedin": "Conectar en LinkedIn",
-    "contact.note": "Reemplaza el correo y la URL de LinkedIn antes de publicar.",
     "footer.top": "Volver arriba ↑",
     "svc.azureMigration": "Arquitectura y migración a Azure",
     "svc.virtualization": "VMware, Proxmox y Hyper-V",
@@ -462,6 +460,12 @@ function setLanguage(lang) {
     metaDescription.setAttribute("content", dictionary.description);
   }
 
+  const socialTitle = document.querySelectorAll('meta[property="og:title"], meta[name="twitter:title"]');
+  socialTitle.forEach(meta => meta.setAttribute("content", dictionary.title));
+
+  const socialDescription = document.querySelectorAll('meta[property="og:description"], meta[name="twitter:description"]');
+  socialDescription.forEach(meta => meta.setAttribute("content", dictionary.description));
+
   document.querySelectorAll("[data-i18n]").forEach(element => {
     const key = element.dataset.i18n;
     if (Object.prototype.hasOwnProperty.call(dictionary, key)) {
@@ -480,7 +484,7 @@ function setLanguage(lang) {
   if (emailCta) {
     const currentHref = emailCta.getAttribute("href");
     const emailMatch = currentHref.match(/^mailto:([^?]+)/);
-    const email = emailMatch ? emailMatch[1] : "your-email@example.com";
+    const email = emailMatch ? emailMatch[1] : "german.sandoval@outlook.com";
     emailCta.setAttribute(
       "href",
       `mailto:${email}?subject=${encodeURIComponent(dictionary["contact.mailSubject"])}`
