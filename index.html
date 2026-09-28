@@ -525,7 +525,7 @@
 <h3 data-i18n="portfolio.libvirt.title">Libvirt / QEMU / KVM</h3>
 <p data-i18n="portfolio.libvirt.copy">Reproducible virtual infrastructure built with OpenTofu, cloud-init and Ansible.</p>
 </div>
-<span class="portfolio-track-count">01</span>
+<span class="portfolio-track-count">02</span>
 </article>
 
 <article class="portfolio-track portfolio-track-coming">
@@ -602,6 +602,66 @@
 </div>
 <div class="architecture-footer">
 <span data-i18n="portfolio.project.archFooter">Encrypted cluster traffic · repeatable deployment · Git-based infrastructure</span>
+</div>
+</div>
+</article>
+
+<article class="project-showcase">
+<div class="project-showcase-main">
+<div class="project-meta">
+<span class="project-number">PROJECT 02</span>
+<span class="project-status"><i></i><span data-i18n="portfolio.vault.status">PUBLISHED</span></span>
+</div>
+<h3 data-i18n="portfolio.vault.title">HashiCorp Vault Raft HA Cluster on QEMU/KVM</h3>
+<p class="project-lead" data-i18n="portfolio.vault.copy">A three-node HashiCorp Vault cluster using Integrated Storage (Raft), provisioned with OpenTofu on libvirt/QEMU and configured with Ansible. The project automates private TLS, Raft peer configuration, Vault initialization, Keepalived virtual-IP failover and prepares an Azure Key Vault auto-unseal extension.</p>
+<div class="project-tech" aria-label="Project technologies">
+<span>OpenTofu</span>
+<span>Libvirt</span>
+<span>QEMU/KVM</span>
+<span>AlmaLinux</span>
+<span>Ansible</span>
+<span>HashiCorp Vault</span>
+<span>Raft</span>
+<span>Keepalived</span>
+<span>Azure Key Vault</span>
+</div>
+<div class="project-actions">
+<a class="btn btn-primary" href="https://github.com/gesandovalr/portfolio-qemu-hashicorp-vault-raft" rel="noopener noreferrer" target="_blank" data-i18n="portfolio.vault.repo">View GitHub Repository ↗</a>
+</div>
+</div>
+<div class="project-architecture" aria-label="Vault Raft project architecture">
+<div class="architecture-header">
+<span class="status-dot"></span>
+<span>vault-raft.architecture</span>
+<span class="panel-state">automated</span>
+</div>
+<div class="architecture-flow">
+<div class="architecture-node architecture-source">
+<small>SOURCE</small>
+<strong>OpenTofu</strong>
+<span>IaC</span>
+</div>
+<div class="architecture-connector">→</div>
+<div class="architecture-node">
+<small>VIRTUALIZE</small>
+<strong>libvirt / QEMU</strong>
+<span>3 × AlmaLinux</span>
+</div>
+<div class="architecture-connector">→</div>
+<div class="architecture-node">
+<small>CONFIGURE</small>
+<strong>Ansible</strong>
+<span>Vault + TLS + HA</span>
+</div>
+</div>
+<div class="cluster-mini">
+<div><span>01</span><strong>Vault Node 01</strong><small>Raft / TLS source</small></div>
+<div><span>02</span><strong>Vault Node 02</strong><small>Raft peer</small></div>
+<div><span>03</span><strong>Vault Node 03</strong><small>Raft peer</small></div>
+<div><span>VIP</span><strong>10.20.10.13</strong><small>Keepalived endpoint</small></div>
+</div>
+<div class="architecture-footer">
+<span data-i18n="portfolio.vault.archFooter">Integrated Storage (Raft) · private TLS · Keepalived HA · Azure auto-unseal ready</span>
 </div>
 </div>
 </article>

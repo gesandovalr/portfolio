@@ -720,6 +720,10 @@ p {
   opacity: .68;
 }
 
+.project-showcase + .project-showcase {
+  margin-top: 28px;
+}
+
 .project-showcase {
   display: grid;
   grid-template-columns: 1.05fr .95fr;
