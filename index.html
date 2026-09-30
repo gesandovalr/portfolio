@@ -46,7 +46,9 @@
     "Linux",
     "Hyper-V",
     "QEMU",
-    "KVM"
+    "KVM",
+    "HAProxy",
+    "Keepalived"
   ]
 }
 </script>
@@ -525,7 +527,7 @@
 <h3 data-i18n="portfolio.libvirt.title">Libvirt / QEMU / KVM</h3>
 <p data-i18n="portfolio.libvirt.copy">Reproducible virtual infrastructure built with OpenTofu, cloud-init and Ansible.</p>
 </div>
-<span class="portfolio-track-count">02</span>
+<span class="portfolio-track-count">03</span>
 </article>
 
 <article class="portfolio-track portfolio-track-coming">
@@ -662,6 +664,65 @@
 </div>
 <div class="architecture-footer">
 <span data-i18n="portfolio.vault.archFooter">Integrated Storage (Raft) · private TLS · Keepalived HA · Azure auto-unseal ready</span>
+</div>
+</div>
+</article>
+
+<article class="project-showcase">
+<div class="project-showcase-main">
+<div class="project-meta">
+<span class="project-number">PROJECT 03</span>
+<span class="project-status"><i></i><span data-i18n="portfolio.haproxy.status">PUBLISHED</span></span>
+</div>
+<h3 data-i18n="portfolio.haproxy.title">HAProxy High Availability on QEMU/KVM</h3>
+<p class="project-lead" data-i18n="portfolio.haproxy.copy">A two-node HAProxy high-availability lab provisioned with OpenTofu on libvirt/QEMU and configured with Ansible. The project demonstrates repeatable VM provisioning, HAProxy configuration, centralized logging, SELinux integration and Keepalived-based virtual-IP failover.</p>
+<div class="project-tech" aria-label="Project technologies">
+<span>OpenTofu</span>
+<span>Libvirt</span>
+<span>QEMU/KVM</span>
+<span>AlmaLinux</span>
+<span>Ansible</span>
+<span>HAProxy</span>
+<span>Keepalived</span>
+<span>rsyslog</span>
+<span>SELinux</span>
+</div>
+<div class="project-actions">
+<a class="btn btn-primary" href="https://github.com/gesandovalr/portfolio-qemu-haproxy" rel="noopener noreferrer" target="_blank" data-i18n="portfolio.haproxy.repo">View GitHub Repository ↗</a>
+</div>
+</div>
+<div class="project-architecture" aria-label="HAProxy high availability project architecture">
+<div class="architecture-header">
+<span class="status-dot"></span>
+<span>haproxy-ha.architecture</span>
+<span class="panel-state">automated</span>
+</div>
+<div class="architecture-flow">
+<div class="architecture-node architecture-source">
+<small>SOURCE</small>
+<strong>OpenTofu</strong>
+<span>IaC</span>
+</div>
+<div class="architecture-connector">→</div>
+<div class="architecture-node">
+<small>VIRTUALIZE</small>
+<strong>libvirt / QEMU</strong>
+<span>2 × AlmaLinux</span>
+</div>
+<div class="architecture-connector">→</div>
+<div class="architecture-node">
+<small>CONFIGURE</small>
+<strong>Ansible</strong>
+<span>HAProxy + Keepalived</span>
+</div>
+</div>
+<div class="cluster-mini">
+<div><span>01</span><strong>HAPRXTEST01</strong><small>HAProxy / MASTER</small></div>
+<div><span>02</span><strong>HAPRXTEST02</strong><small>HAProxy / BACKUP</small></div>
+<div><span>VIP</span><strong>10.20.10.12</strong><small>Floating endpoint</small></div>
+</div>
+<div class="architecture-footer">
+<span data-i18n="portfolio.haproxy.archFooter">HAProxy · least-connections balancing · Keepalived VIP failover · rsyslog integration</span>
 </div>
 </div>
 </article>
